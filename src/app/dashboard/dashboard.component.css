@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid; */
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.mat-toolbar {
+    background-color: #0288d1;
+    height: 70px;
+}
+.logo-txt{
+color: white;
+}
+.logo-img{
+    /* border: 1px solid; */
+    width: 70px;
+    margin-top: -15px;
+    margin-left: -15px;
+}
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width:17%;
+  }
+
+  .mat-dialog-container {
+    padding: 0px !important;
+}
+
+.header-btns{
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}

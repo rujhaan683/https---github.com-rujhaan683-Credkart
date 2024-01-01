@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.expense-card{
+    width: 80%;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-right: auto;
+    background-color: rgb(222, 230, 230);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 60px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.expense-card-div{
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+mat-form-field{
+    /* border: 1px solid; */
+    width: 15rem;
+}
+.submit-btn{
+    margin-top: 30px;
+}

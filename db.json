@@ -1,0 +1,48 @@
+{
+  "login": [
+    {
+      "fullname": "rishab ",
+      "email": "iamrishabtiwari@gmail.com",
+      "mobile": 8249394536,
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "fullname": "Hello ",
+      "email": "iamrishabtiwari@gmail.com",
+      "mobile": 9799296488,
+      "password": "12345678",
+      "id": 2
+    },
+    {
+      "fullname": "rishab",
+      "email": "rishab123@gmail.com",
+      "mobile": 378743434,
+      "password": "1234567",
+      "id": 3
+    }
+  ],
+  "expensedata": [
+    {
+      "name": "Dosa + Idli",
+      "date": "2022-11-14T18:30:00.000Z",
+      "amount": 19,
+      "comment": "Aman gaandu and chutiya",
+      "selectedC": "Food",
+      "selectedM": "UPI",
+      "id": 1
+    },
+    {
+      "name": "idli ssambhar",
+      "date": "2022-11-16T18:30:00.000Z",
+      "amount": 40,
+      "comment": "dscds",
+      "selectedC": "Food",
+      "selectedM": "UPI",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

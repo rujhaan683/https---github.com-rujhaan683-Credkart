@@ -1,0 +1,78 @@
+
+<mat-card class="expense-card">
+    <mat-card-title>Enter Expense</mat-card-title>
+    <mat-card-subtitle>Enter required fields to save a new expense
+    </mat-card-subtitle>
+    <mat-card-content [formGroup]="listForm" class="expense-card-div">
+  
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Enter The Expense Name</mat-label>
+        <input matInput formControlName="name" placeholder="Enter expense name">
+        <mat-icon matSuffix>drive_file_rename_outline</mat-icon>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Enter the amount</mat-label>
+        <input matInput formControlName="amount" placeholder="Enter amount" type="number"
+          onkeypress="if (this.value.length > 11) return false;" />
+        <mat-icon matSuffix>currency_rupee</mat-icon>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Choose a date</mat-label>
+        <input matInput formControlName="date" [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label> Expense Category
+        </mat-label>
+        <mat-select  formControlName="selectedC" required>
+          <mat-option value="Transport">Transport</mat-option>
+          <mat-option value="Food">Food</mat-option>
+          <mat-option value="Entertainment">Entertainment</mat-option>
+          <mat-option value="Education">Education</mat-option>
+          <mat-option value="Misc.s">Misc.s</mat-option>
+          <mat-option value="Social Life">Social Life</mat-option>
+          <mat-option value="Household">Household</mat-option>
+          <mat-option value="Others">Others</mat-option>
+
+        </mat-select>
+      </mat-form-field>
+  
+  
+      <mat-form-field appearance="outline">
+        <mat-label> Mode Of Payment
+        </mat-label>
+        <mat-select formControlName="selectedM" required>
+          <mat-option value="Cash">Cash</mat-option>
+          <mat-option value="Credit Card">Credit Card</mat-option>
+          <mat-option value="Debit Card">Debit Card</mat-option>
+          <mat-option value="UPI">UPI</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Enter any comment</mat-label>
+        <input  formControlName="comment" matInput placeholder="Comment">
+        <mat-icon matSuffix>rate_review</mat-icon>
+      </mat-form-field>
+  
+  
+    </mat-card-content>
+    <mat-divider></mat-divider>
+  
+  
+    <button mat-raised-button color="primary" style="width: 125px;" class="submit-btn" [disabled]="listForm.invalid" (click)="submitList()">{{actionBtn}}</button>
+  
+  
+    <mat-dialog-actions align="end">
+      <button mat-button color="primary" mat-dialog-close>Close</button>
+    </mat-dialog-actions>
+
+  </mat-card>
+

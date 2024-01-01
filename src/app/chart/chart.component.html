@@ -1,0 +1,39 @@
+<table id="htmldata" mat-table id="htmlData" [dataSource]="dataSource!" matSort>
+
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>ID Number</th>
+        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Expense Name</th>
+        <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="amount">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Expense Amount</th>
+        <td mat-cell *matCellDef="let row"> {{row.amount |currency:"INR":"symbol" }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Expense Date</th>
+        <td mat-cell *matCellDef="let row"> {{row.date | date}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="selectedM">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Mode</th>
+        <td mat-cell *matCellDef="let row"> {{row.selectedM}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+</table>
+
+<!-- <button class="btn btn-success btn-block" (click)="openPDF()">Download PDF</button> -->
+
+<mat-dialog-actions align="end">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button mat-raised-button color="primary" (click)="openPDF()" cdkFocusInitial>Print</button>
+</mat-dialog-actions>
